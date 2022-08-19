@@ -11,22 +11,62 @@ var thunderstorm = {
     name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
     id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
 };
-
-//var thunderstorm = ['celtic metal', 'dub step', 'symphonic deathcore', 'slovak metal', 'christian power metal']; 
-var drizzle  = ['uk post-hardcore', 'southern hip hop', 'crunk', 'new wave', 'britpop']; 
-var rain = ['tropical house', 'trap argentino', 'lullaby', 'hawaiian hip hop', 'liquid funk'];
-var snow = ['electric dub', 'psybass', 'brega', 'garage psych', 'indie rock']; 
-var clear = ['punk tuga', 'futuristic swag', 'classical jazz fusion', 'bluegrass', 'chinderlieder'];
-var clouds = ['alternative', 'hiphop', 'rock', 'pop', 'soul']; 
-var mist = ['shanty', 'irish pub song', 'r&b', 'disco', 'belly dance']; 
-var smoke = ['swiss punk', 'russian witch house', 'pop punk', 'trap metal italiana', 'scream rap'];
-var haze = ['shred', 'dreamo', 'c8', 'jangle pop', '8d']; 
-var dust = ['spa', 'zen', 'brain waves', 'white noise', 'bow pop']; 
-var fog = ['this is where we put genres for fog']; //To-Do: add genres to this array
-var sand = ['desert', 'dust']; //To-Do: add genres to this array
-var ash = ['fire', 'pokemon', 'blaze']; //To-Do: add genres to this array
-var squall = ['this is where we put genres for squall']; //To-Do: add genres to this array
-var tornado = ['progressive deathcore', 'skansk musik', 'swedish blues', 'finnish melodeath', 'psychobilly'];
+var drizzle  = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var rain = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var snow = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var clear = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var clouds = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var mist = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var smoke = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var haze = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var dust = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var fog = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var sand = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var ash = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var squall = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var tornado = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
 
 
 var token = "";
@@ -103,7 +143,7 @@ searchButtonEl.on('click', function(event) {
             currentWeather = clear;
         }
         if(data.weather[0].main === "Clouds"){
-            currentWeather = thunderstorm;
+            currentWeather = clouds;
         }
         if(data.weather[0].main === "Mist"){
             currentWeather = mist;
