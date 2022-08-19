@@ -1,5 +1,5 @@
 var rootEl = $('#root');
-var searchInputEl = $('#simple-search');
+var searchInputEl = $('#weather-search');
 var searchButtonEl = $('#search-button');
 var resultsListEl = $('#results-list');
 var resultsItemEl = $('#results-item');
@@ -20,18 +20,33 @@ var ash = ['this is where we put genres for ash']; //To-Do: add genres to this a
 var squall = ['this is where we put genres for squall']; //To-Do: add genres to this array
 var tornado = ['this is where we put genres for tornado']; //To-Do: add genres to this array
 
+var token = "";
+
 var currentWeather;
 //search function grab the user input and make weather api call
 searchButtonEl.on('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
-    event.stopImmediatePropagation();
+    
     var APIKey = "e94d4ae885438d091e5594c1c03900ef";
-    var city = $('input[id="simple-search"]').val();
+    var city = $('input[id="weather-search"]').val();
     var weatherSearchURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
-    var genreSearchURL = "https://musicbrainz.org/ws/2/genre/" + genre + "?limit=100&fmt=json"
     var currentWeather;
     var genre;
+
+    const _getPlaylistByGenre = async (token, genre) => {
+        // On the line below, change 'alternative' to the variable genre when done with testing
+        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + 'alternative' + '/playlists?limit=5', {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+
+        const data = await result.json();
+        console.log(data.playlists.items);
+        $('#linkOne').text('Check out this playlist: ' + data.playlists.items[0].name)
+        $('#linkOne').attr('href' , data.playlists.items[0].external_urls.spotify)
+        return data.playlists.items;
+    }
 
     fetch(weatherSearchURL) 
     .then(function(res) {
@@ -92,85 +107,29 @@ searchButtonEl.on('click', function(event) {
     .then(function() {
         console.log('search initiated')
         console.log(genre)
-        fetch(genreSearchURL) 
-        .then(function(res) {
-        return res.json()
-        })
-        .then(function(data2) {
-        return console.log(data2)
-        })
+        _getPlaylistByGenre(token, genre)
     })
 });
     
-    
-    // var url = "https://musicbrainz.org/ws/2/genre/all?limit=100&fmt=json";
-    // var url = "http://musicbrainz.org/ws/2/artist/all?inc=genres&limit=100&fmt=json";
-    
-    // fetch(url) 
-    // .then(function(res) {
-    //     return res.json()
-    // })
-    // .then(function(data2) {
-    //     return console.log(data2)
-    // })
-    //}
-//});
-
-// fetch('https://api.spotify.com/v1/recommendations')
-// .then(function(res) {
-// return res.json()
-// })
-// .then(function(data3) {
-// return console.log(data3)
-//})
-// var redirectURL = 'file:///Users/bryanborek/Desktop/codingClassWork/GenreForecast/index.html';
-// var clientID = 'c7c18fd700dd48969f6bd66edf018bfc';
-// var clientSecret = 'ca22b75977b643ad8edc5606351acbf1';
-
-// var spotifyURL = 'https:accounts.spotify.com/authorize' + clientID + '&response_type=code&redirect_uri' + encodeURI(redirectURL) + '&show_dialog=true';
-
-// https://api.spotify.com/v1
-
-
+// This generates an access token for us on load
 const APIController = (function() {
     
     const clientId = 'c7c18fd700dd48969f6bd66edf018bfc';
     const clientSecret = 'ca22b75977b643ad8edc5606351acbf1';
 
-    const getToken = async () => {
-
+    const _getToken = async () => {
         const result = await fetch('https://accounts.spotify.com/api/token', {
-
             method: 'POST',
-
             headers: {
-
                 'Content-Type' : 'application/x-www-form-urlencoded', 
                 'Authorization' : 'Basic ' + btoa(clientId + ':' + clientSecret)
-
             },
-
             body: 'grant_type=client_credentials'
-
         });
-
         const data = await result.json();
-        console.log(data.access_token);
+        token = data.access_token;
+        console.log(token);
         return data.access_token;
-
     }
-
-    const getGenres = async (token) => {
-
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
-            method: 'GET',
-            headers: { 'Authorization' : 'Bearer ' + token}
-        });
-
-    }
-
-            getToken();
-            getGenres();
-
+    _getToken()
 })();
-
