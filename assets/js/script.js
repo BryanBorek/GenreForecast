@@ -4,21 +4,22 @@ var searchButtonEl = $('#search-button');
 var resultsListEl = $('#results-list');
 var resultsItemEl = $('#results-item');
 
-var thunderstorm = ['this is where we put genres for thunder']; //To-Do: add genres to this array
-var drizzle	 = ['this is where we put genres for drizzle']; //To-Do: add genres to this array
-var rain = ['this is where we put genres for rain']; //To-Do: add genres to this array
-var snow = ['this is where we put genres for snow']; //To-Do: add genres to this array
-var clear = ['this is where we put genres for clear']; //To-Do: add genres to this array
-var clouds = ['this is where we put genres for clouds', 'other genre', 'and another', 'one more', 'and anotha one!']; //To-Do: add genres to this array
-var mist = ['this is where we put genres for mist']; //To-Do: add genres to this array
-var smoke = ['this is where we put genres for smoke']; //To-Do: add genres to this array
-var haze = ['this is where we put genres for haze']; //To-Do: add genres to this array
-var dust = ['this is where we put genres for dust']; //To-Do: add genres to this array
+var thunderstorm = ['celtic metal, dub step, symphonic deathcore, slovak metal, christian power metal']; 
+var drizzle  = ['uk post-hardcore, southern hip hop, crunk, new wave, britpop']; 
+var rain = ['tropical house, trap argentino, lullaby, hawaiian hip hop, liquid funk,'];
+var snow = ['electric dub, psybass, brega, garage psych, indie rock']; 
+var clear = ['punk tuga, futuristic swag, classical jazz fusion, bluegrass, chinderlieder'];
+var clouds = ['german country, pirate, traditional folk, pop, afro soul']; 
+var mist = ['shanty, irish pub song, r&b, disco, belly dance']; 
+var smoke = ['swiss punk, russian witch house, pop punk, trap metal italiana, scream rap'];
+var haze = ['shred, dreamo, c8, jangle pop, 8d']; 
+var dust = ['spa, zen, brain waves, white noise, bow pop']; 
 var fog = ['this is where we put genres for fog']; //To-Do: add genres to this array
 var sand = ['this is where we put genres for sand']; //To-Do: add genres to this array
 var ash = ['this is where we put genres for ash']; //To-Do: add genres to this array
 var squall = ['this is where we put genres for squall']; //To-Do: add genres to this array
-var tornado = ['this is where we put genres for tornado']; //To-Do: add genres to this array
+var tornado = ['progressive deathcore, skansk musik, swedish blues, finnish melodeath, psychobilly'];
+
 
 var token = "";
 
@@ -119,17 +120,26 @@ const APIController = (function() {
 
     const _getToken = async () => {
         const result = await fetch('https://accounts.spotify.com/api/token', {
+
             method: 'POST',
+
             headers: {
+
                 'Content-Type' : 'application/x-www-form-urlencoded', 
                 'Authorization' : 'Basic ' + btoa(clientId + ':' + clientSecret)
+
             },
+
             body: 'grant_type=client_credentials'
+
         });
+
         const data = await result.json();
         token = data.access_token;
         console.log(token);
         return data.access_token;
+
     }
     _getToken()
 })();
+
