@@ -6,12 +6,18 @@ var resultsItemEl = $('#results-item');
 var cardContainerEl = $('#cards')
 cardContainerEl.hide();
 
+// var for searches needs to be object
+// var thunderstorm = {
+//     name: ['name 1 here', 'name 2 here', 'name 3 here', 'name 4 here', 'name 5 here'],
+//     id: ['id 1 here', 'id 2 here', 'id 3 here', 'id 4 here', 'id 5 here']
+// };
+
 var thunderstorm = ['celtic metal', 'dub step', 'symphonic deathcore', 'slovak metal', 'christian power metal']; 
 var drizzle  = ['uk post-hardcore', 'southern hip hop', 'crunk', 'new wave', 'britpop']; 
 var rain = ['tropical house', 'trap argentino', 'lullaby', 'hawaiian hip hop', 'liquid funk'];
 var snow = ['electric dub', 'psybass', 'brega', 'garage psych', 'indie rock']; 
 var clear = ['punk tuga', 'futuristic swag', 'classical jazz fusion', 'bluegrass', 'chinderlieder'];
-var clouds = ['cloudy', 'hiphop', 'rock', 'pop', 'soul']; 
+var clouds = ['alternative', 'hiphop', 'rock', 'pop', 'soul']; 
 var mist = ['shanty', 'irish pub song', 'r&b', 'disco', 'belly dance']; 
 var smoke = ['swiss punk', 'russian witch house', 'pop punk', 'trap metal italiana', 'scream rap'];
 var haze = ['shred', 'dreamo', 'c8', 'jangle pop', '8d']; 
@@ -39,7 +45,7 @@ searchButtonEl.on('click', function(event) {
 
     const _getPlaylistByGenre = async (token, genre) => {
         // On the line below, change 'alternative' to the variable genre when done with testing
-        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + 'alternative' + '/playlists?limit=5', {
+        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + genre + '/playlists?limit=5', {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
@@ -61,6 +67,15 @@ searchButtonEl.on('click', function(event) {
         //$('#linkOne').attr('href' , data.playlists.items[0].external_urls.spotify)
 
         cardContainerEl.show();
+        $('#goto-playlist1').on('click', function() {
+            window.open(data.playlists.items[0].external_urls.spotify, "_blank");
+        });
+        $('#goto-playlist2').on('click', function() {
+            window.open(data.playlists.items[1].external_urls.spotify, "_blank");
+        });
+        $('#goto-playlist3').on('click', function() {
+            window.open(data.playlists.items[2].external_urls.spotify, "_blank");
+        });
         return data.playlists.items;
     }
 
@@ -69,6 +84,7 @@ searchButtonEl.on('click', function(event) {
         return res.json()
     })
     .then(function(data) {
+        console.log(data)
         if(data.weather[0].main === "Thunderstorm"){
             currentWeather = thunderstorm;
         }
@@ -119,6 +135,7 @@ searchButtonEl.on('click', function(event) {
         var i = Math.floor(Math.random() * currentWeather.length);
         console.log(i);
         genre = currentWeather[i];
+        $('#forecastDesc').text(data.weather[0].main + ' in ' + city + ' today. We recommend on of these playlists.');
     })
     .then(function() {
         console.log('search initiated')
