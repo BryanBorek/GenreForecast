@@ -4,21 +4,21 @@ var searchButtonEl = $('#search-button');
 var resultsListEl = $('#results-list');
 var resultsItemEl = $('#results-item');
 
-var thunderstorm = ['celtic metal, dub step, symphonic deathcore, slovak metal, christian power metal']; 
-var drizzle  = ['uk post-hardcore, southern hip hop, crunk, new wave, britpop']; 
-var rain = ['tropical house, trap argentino, lullaby, hawaiian hip hop, liquid funk,'];
-var snow = ['electric dub, psybass, brega, garage psych, indie rock']; 
-var clear = ['punk tuga, futuristic swag, classical jazz fusion, bluegrass, chinderlieder'];
-var clouds = ['german country, pirate, traditional folk, pop, afro soul']; 
-var mist = ['shanty, irish pub song, r&b, disco, belly dance']; 
-var smoke = ['swiss punk, russian witch house, pop punk, trap metal italiana, scream rap'];
-var haze = ['shred, dreamo, c8, jangle pop, 8d']; 
-var dust = ['spa, zen, brain waves, white noise, bow pop']; 
+var thunderstorm = ['celtic metal', 'dub step', 'symphonic deathcore', 'slovak metal', 'christian power metal']; 
+var drizzle  = ['uk post-hardcore', 'southern hip hop', 'crunk', 'new wave', 'britpop']; 
+var rain = ['tropical house', 'trap argentino', 'lullaby', 'hawaiian hip hop', 'liquid funk'];
+var snow = ['electric dub', 'psybass', 'brega', 'garage psych', 'indie rock']; 
+var clear = ['punk tuga', 'futuristic swag', 'classical jazz fusion', 'bluegrass', 'chinderlieder'];
+var clouds = ['german-country', 'pirate', 'traditional-folk', 'pop', 'afro-soul']; 
+var mist = ['shanty', 'irish pub song', 'r&b', 'disco', 'belly dance']; 
+var smoke = ['swiss punk', 'russian witch house', 'pop punk', 'trap metal italiana', 'scream rap'];
+var haze = ['shred', 'dreamo', 'c8', 'jangle pop', '8d']; 
+var dust = ['spa', 'zen', 'brain waves', 'white noise', 'bow pop']; 
 var fog = ['this is where we put genres for fog']; //To-Do: add genres to this array
 var sand = ['this is where we put genres for sand']; //To-Do: add genres to this array
 var ash = ['this is where we put genres for ash']; //To-Do: add genres to this array
 var squall = ['this is where we put genres for squall']; //To-Do: add genres to this array
-var tornado = ['progressive deathcore, skansk musik, swedish blues, finnish melodeath, psychobilly'];
+var tornado = ['progressive deathcore', 'skansk musik', 'swedish blues', 'finnish melodeath', 'psychobilly'];
 
 
 var token = "";
@@ -37,13 +37,13 @@ searchButtonEl.on('click', function(event) {
 
     const _getPlaylistByGenre = async (token, genre) => {
         // On the line below, change 'alternative' to the variable genre when done with testing
-        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + 'alternative' + '/playlists?limit=5', {
+        const result = await fetch('https://api.spotify.com/v1/browse/categories/?limit=50', {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
         const data = await result.json();
-        console.log(data.playlists.items);
+        console.log(data);
         $('#linkOne').text('Check out this playlist: ' + data.playlists.items[0].name)
         $('#linkOne').attr('href' , data.playlists.items[0].external_urls.spotify)
         return data.playlists.items;
