@@ -3,22 +3,70 @@ var searchInputEl = $('#weather-search');
 var searchButtonEl = $('#search-button');
 var resultsListEl = $('#results-list');
 var resultsItemEl = $('#results-item');
+var cardContainerEl = $('#cards')
+cardContainerEl.hide();
 
-var thunderstorm = ['celtic metal, dub step, symphonic deathcore, slovak metal, christian power metal']; 
-var drizzle  = ['uk post-hardcore, southern hip hop, crunk, new wave, britpop']; 
-var rain = ['tropical house, trap argentino, lullaby, hawaiian hip hop, liquid funk,'];
-var snow = ['electric dub, psybass, brega, garage psych, indie rock']; 
-var clear = ['punk tuga, futuristic swag, classical jazz fusion, bluegrass, chinderlieder'];
-var clouds = ['german country, pirate, traditional folk, pop, afro soul']; 
-var mist = ['shanty, irish pub song, r&b, disco, belly dance']; 
-var smoke = ['swiss punk, russian witch house, pop punk, trap metal italiana, scream rap'];
-var haze = ['shred, dreamo, c8, jangle pop, 8d']; 
-var dust = ['spa, zen, brain waves, white noise, bow pop']; 
-var fog = ['this is where we put genres for fog']; //To-Do: add genres to this array
-var sand = ['this is where we put genres for sand']; //To-Do: add genres to this array
-var ash = ['this is where we put genres for ash']; //To-Do: add genres to this array
-var squall = ['this is where we put genres for squall']; //To-Do: add genres to this array
-var tornado = ['progressive deathcore, skansk musik, swedish blues, finnish melodeath, psychobilly'];
+// var for searches needs to be object
+var thunderstorm = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var drizzle  = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var rain = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var snow = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var clear = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var clouds = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var mist = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var smoke = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var haze = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var dust = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var fog = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var sand = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var ash = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var squall = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
+var tornado = {
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+};
 
 
 var token = "";
@@ -33,19 +81,43 @@ searchButtonEl.on('click', function(event) {
     var city = $('input[id="weather-search"]').val();
     var weatherSearchURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
     var currentWeather;
-    var genre;
+    var genreId;
+    var genreName;
+
 
     const _getPlaylistByGenre = async (token, genre) => {
         // On the line below, change 'alternative' to the variable genre when done with testing
-        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + 'alternative' + '/playlists?limit=5', {
+        const result = await fetch('https://api.spotify.com/v1/browse/categories/' + genreId + '/playlists?limit=5', {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
         const data = await result.json();
-        console.log(data.playlists.items);
-        $('#linkOne').text('Check out this playlist: ' + data.playlists.items[0].name)
-        $('#linkOne').attr('href' , data.playlists.items[0].external_urls.spotify)
+        console.log(data);
+        $('#card1').text(data.playlists.items[0].name)
+        $('#image1').attr('src', data.playlists.items[0].images[0].url)
+        $('#desc1').text(data.playlists.items[0].description)
+        
+        $('#card2').text(data.playlists.items[1].name)
+        $('#image2').attr('src', data.playlists.items[1].images[0].url)
+        $('#desc2').text(data.playlists.items[1].description)
+        
+        $('#card3').text(data.playlists.items[2].name)
+        $('#image3').attr('src', data.playlists.items[2].images[0].url)
+        $('#desc3').text(data.playlists.items[2].description)
+
+        //$('#linkOne').attr('href' , data.playlists.items[0].external_urls.spotify)
+
+        cardContainerEl.show();
+        $('#goto-playlist1').on('click', function() {
+            window.open(data.playlists.items[0].external_urls.spotify, "_blank");
+        });
+        $('#goto-playlist2').on('click', function() {
+            window.open(data.playlists.items[1].external_urls.spotify, "_blank");
+        });
+        $('#goto-playlist3').on('click', function() {
+            window.open(data.playlists.items[2].external_urls.spotify, "_blank");
+        });
         return data.playlists.items;
     }
 
@@ -54,6 +126,7 @@ searchButtonEl.on('click', function(event) {
         return res.json()
     })
     .then(function(data) {
+        console.log(data)
         if(data.weather[0].main === "Thunderstorm"){
             currentWeather = thunderstorm;
         }
@@ -101,14 +174,17 @@ searchButtonEl.on('click', function(event) {
         }
         console.log(currentWeather);
         //TO-DO create a random number between 0 and 4 for i used on the next line
-        var i = Math.floor(Math.random() * currentWeather.length);
+        var i = Math.floor(Math.random() * currentWeather.id.length);
         console.log(i);
-        genre = currentWeather[i];
+        genreId = currentWeather.id[i];
+        genreName = currentWeather.name[i];
+
+        $('#forecastDesc').text(data.weather[0].main + ' in ' + city + ' today. In the mood for a ' + genreName + ' playlists.');
     })
     .then(function() {
         console.log('search initiated')
-        console.log(genre)
-        _getPlaylistByGenre(token, genre)
+        console.log(genreId)
+        _getPlaylistByGenre(token, genreId)
     })
 });
     

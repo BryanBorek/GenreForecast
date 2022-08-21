@@ -7,3 +7,12 @@
       font-family: Proxima Nova, system-ui, sans-serif;
     }
   }
+
+  body {
+    background-image: url("GFbg.png");
+    background-color: #cccccc;
+    background-position-x: center;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
