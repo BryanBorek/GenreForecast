@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-gfbg min-h-screen">
-    <div class="root py-5 my-7 flex-col items-center">
+    <div class="root py-5 mt-7 flex-col items-center">
         <h1 class="text-5xl m-5 text-white text-center">Whats on your radar?</h1>
         <!-- <input class="search-results" type="text" placeholder="Search.."> -->
         <form class="m-2 flex justify-center items-center">   
@@ -44,7 +44,7 @@
                           content.
                         </p>
                         <button type="button" id="goto-playlist1" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Go To Playlist</button>
-                        <button type="button" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
+                        <button type="button" id="save-playlist1" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
                     </div>
                 </div> 
             </div>
@@ -60,7 +60,7 @@
                           content.
                         </p>
                         <button type="button" id="goto-playlist2" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Go To Playlist</button>
-                        <button type="button" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
+                        <button type="button" id="save-playlist2" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
                     </div>
                 </div> 
             </div>      
@@ -76,12 +76,21 @@
                               content.
                         </p>
                         <button type="button" id="goto-playlist3" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Go To Playlist</button>
-                        <button type="button" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
+                        <button type="button" id="save-playlist3" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Save Playlist</button>
                     </div>
                 </div>
             </div>           
         </nav>
     </div>
+    <section>
+        <div class="m-2 flex justify-center items-center">
+            <button type="button" id="showPlaylistBtn" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Show/Hide Saved Playlists</button>
+            <button type="button" id="hidePlaylistBtn" class="m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Show/Hide Saved Playlists</button>
+        </div>
+        <div id="playlistContainer" class="m-2 flex-wrap justify-center items-center">
+
+        </div>
+    </section>
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="assets/js/script.js"></script>
 </body>
