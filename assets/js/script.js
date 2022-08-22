@@ -145,7 +145,6 @@ searchButtonEl.on('click', function(event) {
         });
 
         const data = await result.json();
-        console.log(data);
         $('#card1').text(data.playlists.items[0].name);
         $('#image1').attr('src', data.playlists.items[0].images[0].url);
         $('#desc1').text(data.playlists.items[0].description);
@@ -280,8 +279,6 @@ searchButtonEl.on('click', function(event) {
         if(data.weather[0].main === "Tornado"){
             currentWeather = tornado;
         }
-        console.log(currentWeather);
-        //TO-DO create a random number between 0 and 4 for i used on the next line
         var i = Math.floor(Math.random() * currentWeather.id.length);
         genreId = currentWeather.id[i];
         genreName = currentWeather.name[i];
