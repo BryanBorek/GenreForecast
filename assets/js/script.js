@@ -8,64 +8,64 @@ cardContainerEl.hide();
 
 // var for searches needs to be object
 var thunderstorm = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Alternative', 'Radar', 'Rock', 'Punk', 'Metal'],
+    id: ['alternative', 'radar', 'rock', 'punk', '0JQ5DAqbMKFDkd668ypn6O']
 };
 var drizzle  = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Frequency', 'Pride', 'Regional Mexican', 'Chill', 'Netflix'],
+    id: ['0JQ5DAqbMKFF9bY76LXmfI', 'pride', '0JQ5DAqbMKFDTEtSaS4R92', 'chill', 'netflix-page']
 };
 var rain = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Wellness', 'Sleep', 'Mood', 'Christian & Gospel', 'Country'],
+    id: ['wellness', '0JQ5DAqbMKFCuoRTxhYWow', 'mood', 'inspirational', 'country']
 };
 var snow = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Workout', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', '0JQ5DAqbMKFAXlCG6QvYQ4', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 var clear = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Summer', 'Hip-Hop', 'Dance/Electronic', 'Punk', 'Frequency'],
+    id: ['summer', 'hiphop', 'edm_dance', 'punk', '0JQ5DAqbMKFF9bY76LXmfI']
 };
 var clouds = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['R & B', 'Hip-Hop', 'Indie', 'EQUALS', 'Gaming'],
+    id: ['0JQ5DAqbMKFEZPnFQSFB1T', 'hiphop', 'indie_alt', '0JQ5DAqbMKFPw634sFwguI', '0JQ5DAqbMKFCfObibaOZbv']
 };
 var mist = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Pride', 'Jazz', 'Romance', 'Folk & Acoustic', 'K-Pop'],
+    id: ['pride', 'jazz', '0JQ5DAqbMKFAUsdyVjCQuL', 'roots', '0JQ5DAqbMKFGvOw3O4nLAf']
 };
 var smoke = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var haze = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var dust = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var fog = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var sand = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var ash = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var squall = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Kids & Family', 'Decades', 'Fresh Finds', 'Focus', 'Soul'],
+    id: ['0JQ5DAqbMKFFoimhOqWzLB', '0JQ5DAqbMKFIVNxQgRNSg0', '0JQ5DAqbMKFImHYGo3eTSg', '0JQ5DAqbMKFCbimwdOYlsl', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 var tornado = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Kids & Family', 'Decades', 'Fresh Finds', 'Focus', 'Soul'],
+    id: ['0JQ5DAqbMKFFoimhOqWzLB', '0JQ5DAqbMKFIVNxQgRNSg0', '0JQ5DAqbMKFImHYGo3eTSg', '0JQ5DAqbMKFCbimwdOYlsl', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 
 
