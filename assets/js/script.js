@@ -17,64 +17,64 @@ var savedList = {
 
 // var for searches needs to be object
 var thunderstorm = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Alternative', 'Radar', 'Rock', 'Punk', 'Metal'],
+    id: ['alternative', 'radar', 'rock', 'punk', '0JQ5DAqbMKFDkd668ypn6O']
 };
 var drizzle  = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Frequency', 'Pride', 'Regional Mexican', 'Chill', 'Netflix'],
+    id: ['0JQ5DAqbMKFF9bY76LXmfI', 'pride', '0JQ5DAqbMKFDTEtSaS4R92', 'chill', 'netflix-page']
 };
 var rain = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Wellness', 'Sleep', 'Mood', 'Christian & Gospel', 'Country'],
+    id: ['wellness', '0JQ5DAqbMKFCuoRTxhYWow', 'mood', 'inspirational', 'country']
 };
 var snow = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Alternative', 'Hip-Hop', 'Rock', 'Workout', 'Soul'],
+    id: ['alternative', 'hiphop', 'rock', '0JQ5DAqbMKFAXlCG6QvYQ4', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 var clear = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Summer', 'Hip-Hop', 'Dance/Electronic', 'Punk', 'Frequency'],
+    id: ['summer', 'hiphop', 'edm_dance', 'punk', '0JQ5DAqbMKFF9bY76LXmfI']
 };
 var clouds = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['R & B', 'Hip-Hop', 'Indie', 'EQUALS', 'Gaming'],
+    id: ['0JQ5DAqbMKFEZPnFQSFB1T', 'hiphop', 'indie_alt', '0JQ5DAqbMKFPw634sFwguI', '0JQ5DAqbMKFCfObibaOZbv']
 };
 var mist = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Pride', 'Jazz', 'Romance', 'Folk & Acoustic', 'K-Pop'],
+    id: ['pride', 'jazz', '0JQ5DAqbMKFAUsdyVjCQuL', 'roots', '0JQ5DAqbMKFGvOw3O4nLAf']
 };
 var smoke = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var haze = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var dust = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var fog = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var sand = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var ash = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Instrumental', 'Sports', 'Ambient', 'In the car', 'Cooking & Dining'],
+    id: ['0JQ5DAqbMKFRieVZLLoo9m', 'sports', '0JQ5DAqbMKFLjmiZRss79w', 'in_the_car', '0JQ5DAqbMKFRY5ok2pxXJ0']
 };
 var squall = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Kids & Family', 'Decades', 'Fresh Finds', 'Focus', 'Soul'],
+    id: ['0JQ5DAqbMKFFoimhOqWzLB', '0JQ5DAqbMKFIVNxQgRNSg0', '0JQ5DAqbMKFImHYGo3eTSg', '0JQ5DAqbMKFCbimwdOYlsl', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 var tornado = {
-    name: ['Alternative', 'Hip-Hop', 'Rock', 'Punk', 'Soul'],
-    id: ['alternative', 'hiphop', 'rock', 'punk', '0JQ5DAqbMKFIpEuaCnimBj']
+    name: ['Kids & Family', 'Decades', 'Fresh Finds', 'Focus', 'Soul'],
+    id: ['0JQ5DAqbMKFFoimhOqWzLB', '0JQ5DAqbMKFIVNxQgRNSg0', '0JQ5DAqbMKFImHYGo3eTSg', '0JQ5DAqbMKFCbimwdOYlsl', '0JQ5DAqbMKFIpEuaCnimBj']
 };
 
 playListBtn.on('click' , function(event) {
@@ -84,7 +84,9 @@ playListBtn.on('click' , function(event) {
     for (var i = 0; i < savedList.playlistName.length; i++) {
         var choiceEl = $('<button>');
         choiceEl.text(savedList.playlistName[i]);
-        choiceEl.attr('onclick', "location.href=" savedList.playlistLink[i]);
+        choiceEl.attr('type', 'button');
+        choiceEl.attr('href', savedList.playlistLink[i]);
+        choiceEl.attr('id', 'savedInList')
         choiceEl.addClass('m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"');
         playlistContainerEl.append(choiceEl);
     }
@@ -100,13 +102,21 @@ hidePlayListBtn.on('click', function(event) {
     playListBtn.show();
 });
 
+playlistContainerEl.on('click', '#savedInList' , function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    window.open($(this).attr('href'));
+});
+
 function updateSavedPlaylist() {
     playlistContainerEl.children().remove();
 
     for (var i = 0; i < savedList.playlistName.length; i++) {
         var choiceEl = $('<button>');
         choiceEl.text(savedList.playlistName[i]);
-        choiceEl.attr('onclick', 'location.href=' + savedList.playlistLink[i]);
+        choiceEl.attr('type', 'button');
+        choiceEl.attr('href', savedList.playlistLink[i]);
+        choiceEl.attr('id', 'savedInList')
         choiceEl.addClass('m-2.5 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"');
         playlistContainerEl.append(choiceEl);
     }
@@ -165,7 +175,6 @@ searchButtonEl.on('click', function(event) {
             for (var i = 0; i < savedList.playlistLink.length; i++) {
                 for (var j = 0; j < savedList.playlistLink.length; j++) {
                     if (data.playlists.items[0].external_urls.spotify === savedList.playlistLink[i]) {
-                        console.log('double')
                         savedList.playlistLink.splice(i , 1);
                         savedList.playlistName.splice(i , 1);
                     }
@@ -183,7 +192,6 @@ searchButtonEl.on('click', function(event) {
             for (var i = 0; i < savedList.playlistLink.length; i++) {
                 for (var j = 0; j < savedList.playlistLink.length; j++) {
                     if (data.playlists.items[1].external_urls.spotify === savedList.playlistLink[i]) {
-                        console.log('double')
                         savedList.playlistLink.splice(i , 1);
                         savedList.playlistName.splice(i , 1);
                     }
@@ -201,7 +209,6 @@ searchButtonEl.on('click', function(event) {
             for (var i = 0; i < savedList.playlistLink.length; i++) {
                 for (var j = 0; j < savedList.playlistLink.length; j++) {
                     if (data.playlists.items[2].external_urls.spotify === savedList.playlistLink[i]) {
-                        console.log('double')
                         savedList.playlistLink.splice(i , 1);
                         savedList.playlistName.splice(i , 1);
                     }
@@ -221,7 +228,6 @@ searchButtonEl.on('click', function(event) {
     .then(function(res) {
         if(res.status != '200') {
             $('#weather-search').attr('placeholder', 'City not found, try again?');
-            console.log(res.cod);
         }else{
             $('#weather-search').attr('placeholder', 'Search again?');
             $('#weather-search').val('');
@@ -229,7 +235,6 @@ searchButtonEl.on('click', function(event) {
         }
     })
     .then(function(data) {
-        console.log(data)
         if(data.weather[0].main === "Thunderstorm"){
             currentWeather = thunderstorm;
         }
@@ -278,15 +283,12 @@ searchButtonEl.on('click', function(event) {
         console.log(currentWeather);
         //TO-DO create a random number between 0 and 4 for i used on the next line
         var i = Math.floor(Math.random() * currentWeather.id.length);
-        console.log(i);
         genreId = currentWeather.id[i];
         genreName = currentWeather.name[i];
 
         $('#forecastDesc').text(data.weather[0].main + ' in ' + city + ' today. In the mood for a ' + genreName + ' playlist?');
     })
     .then(function() {
-        console.log('search initiated')
-        console.log(genreId)
         _getPlaylistByGenre(token, genreId)
     })
 });
@@ -315,7 +317,6 @@ const APIController = (function() {
 
         const data = await result.json();
         token = data.access_token;
-        console.log(token);
         return data.access_token;
 
     }
